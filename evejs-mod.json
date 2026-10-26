@@ -14,7 +14,7 @@
     {
       "mirror": "github",
       "priority": 1,
-      "url": "https://github.com/MateralCMX/evejs-mod-bug-fixes/releases/download/v0.17.3/bug-fixes-0.17.3.zip"
+      "url": "https://github.com/MateralCMX/evejs-mod-bug-fixes/releases/download/v0.17.5/bug-fixes-0.17.5.zip"
     }
   ],
   "evejsVersions": [
@@ -22,6 +22,8 @@
   ],
   "featured": false,
   "highlights": [
+    "改善首次进入太空时装备槽加载失败的问题：类型列表资源加载返回空值时自动恢复一次，并避免中文诊断日志打断 HUD 自修复。",
+    "修复与月矿增强同时启用时，月矿钻探与排程按钮因配置版本误判而无法打开窗口的问题。",
     "修复中文装配名称、描述等文本导致装配窗口无法打开的问题，无需另装中文编码修复模组。",
     "避免重复导入相同装配，拒绝非法对象名称，并修复卸载后弹药或脚本图标残留。",
     "应用装配时支持查找当前空间站个人集装箱内的装备。",
@@ -31,20 +33,20 @@
     "修复锁定状态残留及部分运动状态同步问题。",
     "修复大量敌人击毁后赏金重复累计的问题，保留服务端军团税结算规则。",
     "允许铁骑收到远距离攻击命令后先追击，实际伤害仍受射程限制。",
-    "跳跃克隆完成后刷新活动植入体显示，并补齐库存服务发现。",
-    "禁止实际跃迁途中开启加力燃烧器和微型跃迁推进器。"
+    "跳跃克隆完成后刷新活动植入体显示，并补齐库存服务发现。"
   ],
   "history": [],
   "id": "bug-fixes",
-  "publishedAt": "2026-10-21",
+  "publishedAt": "2026-10-26",
   "readme": [
     "启用后重启游戏服务端，并完全退出、重新启动客户端。已损坏的历史装配名称需手动重新命名；历史重复装配与赏金不会自动清理或回退。",
+    "首次加载修复针对类型列表资源暂时不可用；资源持续不可用时仍保留错误，不会伪造空列表。诊断写入 `%TEMP%/bug-fixes-client.log`。本次已通过客户端字节码离线回放，重启两端后的首次登录仍待游戏内验收。",
     "模组还提供空间状态诊断记录，可在 diagnostics.json 中将 spatialTrace 设为 false 后重启两端关闭。"
   ],
   "repo": "https://github.com/MateralCMX/evejs-mod-bug-fixes",
   "requiresRestart": true,
-  "sha256": "4062f49b295d93f5288e8b5398515d48cbddc4e85b280ed162cb7224bbfba4e3",
-  "sizeBytes": 879519,
+  "sha256": "bfc67dd9ffb4d12a4cc95a770feaaa2f35cca88ff7a5e01dd2f73e58957285bb",
+  "sizeBytes": 897435,
   "tags": [],
-  "version": "0.17.3"
+  "version": "0.17.5"
 }
